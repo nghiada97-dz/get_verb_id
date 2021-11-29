@@ -64,8 +64,8 @@ try {
 
         return epic
     }
-
-    core.setOutput("id", get_epic_id());
+    var original = Promise.resolve(get_epic_id());
+    core.setOutput("id", "original");
     const payload = JSON.stringify(github.context.payload, undefined, 2)
     console.log(`The event payload: ${payload}`);
 } catch (error) {
