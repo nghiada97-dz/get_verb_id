@@ -8,5 +8,5 @@ outputs:
   time: # id of output
     description: 'EPIC ID'
 runs:
-  using: 'node14'
+  using: 'node12'
   main: 'index.js'
