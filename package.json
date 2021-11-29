@@ -1,0 +1,24 @@
+{
+  "name": "get_verb_id",
+  "version": "1.0.0",
+  "description": "Get verb epic id to azu devops",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nghiada97-dz/get_verb_id.git"
+  },
+  "author": "nghia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nghiada97-dz/get_verb_id/issues"
+  },
+  "homepage": "https://github.com/nghiada97-dz/get_verb_id#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "request": "^2.88.2"
+  }
+}
