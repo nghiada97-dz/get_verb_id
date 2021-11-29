@@ -50,7 +50,8 @@ async function get_method(id){
 
 
 try {
-    const commit_mess = core.getInput('commit-mess');
+    // const commit_mess = core.getInput('commit-mess');
+    const commit_mess = "AB#2031: transformation: fix output step"
     let a = commit_mess.match(/AB#(\d+)/)
     let item = a[1]
 
@@ -61,11 +62,17 @@ try {
         await console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbbb"+feature)
         let epic = await get_method(feature)
         await console.log("cccccccccccccccccccccccccccc"+epic)
+        await core.setOutput("id", epic);
 
         return epic
     }
-    var original = Promise.resolve(get_epic_id());
-    core.setOutput("id", "original");
+    // const myPromise = new Promise((resolve, reject) => {
+    //     console.log(get_epic_id())
+    //     core.setOutput("id", get_epic_id());
+
+    //   });
+    // core.setOutput("id", original);
+    get_epic_id()
     const payload = JSON.stringify(github.context.payload, undefined, 2)
     console.log(`The event payload: ${payload}`);
 } catch (error) {
